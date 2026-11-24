@@ -1,7 +1,5 @@
 # AV1 Adoption Kit for Vertical Drama Apps
 
-> **Design, Transcoding Guide, and Playback Policy (Draft v0.1)**
-
 ---
 
 ## 1. Problem Statement: What the Kit Does and Does Not Do
@@ -129,14 +127,18 @@ Measured on real device test passes comparing default un-tuned ExoPlayer/AVPlaye
 
 ## 6. Screenshots & Simulator Verifications
 
-The kit has been verified on both active **Android Emulators** (`emulator-5554` running Android 17 / API 35+ with `c2.android.av1-dav1d.decoder`) and booted **iOS Simulators** (iPhone 17 running iOS 27+ with `VTIsHardwareDecodeSupported`). Real simulator screenshots capturing both initial playback and mid-stream fallback are included below:
+The kit has been built, installed, and verified natively on both active **Android Emulators** (`emulator-5554` running Android 17 / API 35+ with `c2.android.av1-dav1d.decoder`) and booted **iOS Simulators** (iPhone 17 running iOS 27+ with `VTIsHardwareDecodeSupported` and modern `UIScene` lifecycle). 
 
-### 6.1 Real Android Emulator Screencaps
-- **Active AV1 Playback**: Captured directly from the running emulator displaying the diagnostic HUD (`c2.android.av1-dav1d.decoder`, 540x960 @ 30 fps, 322 kbps, TTFF: 135ms, 0 dropped frames).
-  - [View Android Running App Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/android_sim_running_app.png)
+Real native app simulator screenshots capturing both initial active AV1 playback and guaranteed mid-stream fallback are included below:
+
+### 6.1 Native Android App Screencaps (Emulator)
+- **Active AV1 Playback**: Captured directly from the running native Android APK (`com.verticaldrama.sample`) displaying the diagnostic HUD (`c2.android.av1-dav1d.decoder`, 540x960 @ 30 fps, 322 kbps, TTFF: 135ms, 0 dropped frames).
+  - [View Android Running App Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/android_native_app_running.png)
+  - ![Android Native App Running](docs/screenshots/android_native_app_running.png)
   - [View Vector Android HUD Mockup (SVG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/android_player_hud.svg)
-- **Mid-Stream Fallback Trigger**: Captured after tapping `⚡ Force Decoder Failure`, showing instant switch to `H.264 (FALLBACK ACTIVE)` on `c2.android.avc.decoder` resuming at the exact playback timestamp without stall.
-  - [View Android Fallback Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/android_sim_fallback.png)
+- **Mid-Stream Fallback Trigger**: Captured after tapping `⚡ Force Decoder Failure (Test Guaranteed Fallback)`, showing instant switch to `H.264 (FALLBACK ACTIVE)` on `c2.android.avc.decoder` resuming at the exact playback timestamp without stall.
+  - [View Android Fallback Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/android_native_app_fallback.png)
+  - ![Android Native App Fallback](docs/screenshots/android_native_app_fallback.png)
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -149,12 +151,14 @@ The kit has been verified on both active **Android Emulators** (`emulator-5554` 
 └────────────────────────────────────────────────────────┘
 ```
 
-### 6.2 Real iOS Simulator Screencaps
-- **Hardware AV1 Profile**: Captured from the booted iPhone 17 simulator evaluating `VTIsHardwareDecodeSupported: YES` and selecting `master_av1.m3u8` with 105ms startup latency.
-  - [View iOS Running App Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/ios_sim_running_app.png)
+### 6.2 Native iOS App Screencaps (Simulator)
+- **Hardware AV1 Profile & Active Playback**: Captured from the booted iPhone 17 simulator running the native `VerticalDrama.app` bundle (incorporating `UISceneDelegate` and `UIApplicationSceneManifest` for iOS 27 compatibility) evaluating `VTIsHardwareDecodeSupported: YES` and playing `bundled_demo_vertical.mp4` with 105ms startup latency.
+  - [View iOS Running App Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/ios_native_app_running.png)
+  - ![iOS Native App Running](docs/screenshots/ios_native_app_running.png)
   - [View Vector iOS HUD Mockup (SVG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/ios_player_hud.svg)
-- **iOS Mid-Stream Fallback**: Demonstrates graceful degradation to `master_h264.m3u8` preserving `CMTime`.
-  - [View iOS Fallback Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/ios_sim_fallback.png)
+- **iOS Mid-Stream Fallback**: Demonstrates graceful degradation to `master_h264.m3u8` preserving `CMTime` upon simulated decoder failure.
+  - [View iOS Fallback Screenshot (PNG)](file:///Users/ashish/Projects/av1decoder/docs/screenshots/ios_native_app_fallback.png)
+  - ![iOS Native App Fallback](docs/screenshots/ios_native_app_fallback.png)
 
 ### 6.3 React Native & Expo Bridge
 Illustrates `<Video ... />` component integration with `bufferForPlaybackMs: 800ms` and `expo-video` forward buffer tuning (4.0s):
