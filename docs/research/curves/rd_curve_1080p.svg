@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420" width="100%" height="100%" style="background:#0f172a; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;">
+<style>
+.axis { stroke: #334155; stroke-width: 1.5; }
+.grid { stroke: #1e293b; stroke-dasharray: 4; stroke-width: 1; }
+.title { fill: #f8fafc; font-size: 16px; font-weight: 600; text-anchor: middle; }
+.label { fill: #94a3b8; font-size: 12px; }
+.tick { fill: #64748b; font-size: 11px; }
+.line-h264 { stroke: #ef4444; stroke-width: 2.5; fill: none; }
+.line-hevc { stroke: #3b82f6; stroke-width: 2.5; fill: none; }
+.line-av1 { stroke: #10b981; stroke-width: 2.5; fill: none; }
+</style>
+<text class="title" x="375.0" y="30">Rate-Distortion Curve: 1080p (1080x1920)</text>
+<line class="grid" x1="80" y1="360.0" x2="710" y2="360.0" />
+<text class="tick" x="70" y="364.0" text-anchor="end">60</text>
+<line class="grid" x1="80" y1="321.25" x2="710" y2="321.25" />
+<text class="tick" x="70" y="325.25" text-anchor="end">65</text>
+<line class="grid" x1="80" y1="282.5" x2="710" y2="282.5" />
+<text class="tick" x="70" y="286.5" text-anchor="end">70</text>
+<line class="grid" x1="80" y1="243.75" x2="710" y2="243.75" />
+<text class="tick" x="70" y="247.75" text-anchor="end">75</text>
+<line class="grid" x1="80" y1="205.0" x2="710" y2="205.0" />
+<text class="tick" x="70" y="209.0" text-anchor="end">80</text>
+<line class="grid" x1="80" y1="166.25" x2="710" y2="166.25" />
+<text class="tick" x="70" y="170.25" text-anchor="end">85</text>
+<line class="grid" x1="80" y1="127.5" x2="710" y2="127.5" />
+<text class="tick" x="70" y="131.5" text-anchor="end">90</text>
+<line class="grid" x1="80" y1="88.75" x2="710" y2="88.75" />
+<text class="tick" x="70" y="92.75" text-anchor="end">95</text>
+<line class="grid" x1="80" y1="50.0" x2="710" y2="50.0" />
+<text class="tick" x="70" y="54.0" text-anchor="end">100</text>
+<line class="grid" x1="80.0" y1="50" x2="80.0" y2="360" />
+<text class="tick" x="80.0" y="378" text-anchor="middle">204k</text>
+<line class="grid" x1="206.0" y1="50" x2="206.0" y2="360" />
+<text class="tick" x="206.0" y="378" text-anchor="middle">738k</text>
+<line class="grid" x1="332.0" y1="50" x2="332.0" y2="360" />
+<text class="tick" x="332.0" y="378" text-anchor="middle">1272k</text>
+<line class="grid" x1="458.0" y1="50" x2="458.0" y2="360" />
+<text class="tick" x="458.0" y="378" text-anchor="middle">1806k</text>
+<line class="grid" x1="584.0" y1="50" x2="584.0" y2="360" />
+<text class="tick" x="584.0" y="378" text-anchor="middle">2340k</text>
+<line class="grid" x1="710.0" y1="50" x2="710.0" y2="360" />
+<text class="tick" x="710.0" y="378" text-anchor="middle">2875k</text>
+<line class="axis" x1="80" y1="50" x2="80" y2="360" />
+<line class="axis" x1="80" y1="360" x2="710" y2="360" />
+<text class="label" x="375.0" y="408" text-anchor="middle">Bitrate (kbps) [VBV / Capped CRF mbr]</text>
+<text class="label" x="22" y="210.0" text-anchor="middle" transform="rotate(-90 22 210.0)">VMAF Perceptual Quality (0-100)</text>
+<path class="line-h264" d="M 179.1,484.2 L 265.7,355.9 L 403.2,243.9 L 621.5,163.0" />
+<circle cx="179.1" cy="484.2" r="4.5" fill="#ef4444" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="265.7" cy="355.9" r="4.5" fill="#ef4444" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="403.2" cy="243.9" r="4.5" fill="#ef4444" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="621.5" cy="163.0" r="4.5" fill="#ef4444" stroke="#0f172a" stroke-width="1.5" />
+<path class="line-hevc" d="M 114.2,489.8 L 162.8,361.3 L 239.7,248.2 L 362.0,165.9" />
+<circle cx="114.2" cy="489.8" r="4.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="162.8" cy="361.3" r="4.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="239.7" cy="248.2" r="4.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="362.0" cy="165.9" r="4.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1.5" />
+<path class="line-av1" d="M 92.1,544.6 L 127.6,417.7 L 183.9,294.8 L 273.4,198.1" />
+<circle cx="92.1" cy="544.6" r="4.5" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="127.6" cy="417.7" r="4.5" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="183.9" cy="294.8" r="4.5" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+<circle cx="273.4" cy="198.1" r="4.5" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+<rect x="470" y="60" width="230" height="75" rx="6" fill="#1e293b" opacity="0.9" stroke="#334155" />
+<line class="line-h264" x1="485" y1="80" x2="515" y2="80" />
+<circle cx="500" cy="80" r="4" fill="#ef4444" />
+<text class="label" x="525" y="84" fill="#f8fafc">H.264 (libx264)</text>
+<line class="line-hevc" x1="485" y1="100" x2="515" y2="100" />
+<circle cx="500" cy="100" r="4" fill="#3b82f6" />
+<text class="label" x="525" y="104" fill="#f8fafc">HEVC (libx265)</text>
+<line class="line-av1" x1="485" y1="120" x2="515" y2="120" />
+<circle cx="500" cy="120" r="4" fill="#10b981" />
+<text class="label" x="525" y="124" fill="#f8fafc">AV1 (libsvtav1 fast-dec)</text>
+</svg>

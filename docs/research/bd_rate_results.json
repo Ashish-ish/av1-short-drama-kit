@@ -1,0 +1,1037 @@
+{
+  "clips": [
+    {
+      "id": "clip_01_talking_head",
+      "category": "talking_head",
+      "title": "Talking Head Drama Dialogue"
+    },
+    {
+      "id": "clip_02_high_motion",
+      "category": "high_motion",
+      "title": "High-Motion Action Stunt"
+    },
+    {
+      "id": "clip_03_dark_scene",
+      "category": "dark_scene",
+      "title": "Dark Scene Low-Light Suspense"
+    }
+  ],
+  "rungs": [
+    "360p",
+    "540p",
+    "720p",
+    "1080p"
+  ],
+  "evaluations": [
+    {
+      "clip_id": "clip_01_talking_head",
+      "clip_category": "talking_head",
+      "rung": "360p",
+      "width": 360,
+      "height": 640,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 785.7,
+          "vmaf": 92.3
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 495.0,
+          "vmaf": 85.98
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 311.8,
+          "vmaf": 75.84
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 196.4,
+          "vmaf": 61.62
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 440.0,
+          "vmaf": 92.09
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 277.2,
+          "vmaf": 85.63
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 174.6,
+          "vmaf": 75.3
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 110.0,
+          "vmaf": 60.93
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 405.7,
+          "vmaf": 91.51
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 255.6,
+          "vmaf": 84.66
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 161.0,
+          "vmaf": 73.84
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 101.4,
+          "vmaf": 59.08
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.87,
+      "bd_rate_av1_vs_h264_pct": -44.5,
+      "bd_rate_av1_vs_hevc_pct": -2.83,
+      "bd_vmaf_av1_vs_h264": 13.35,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_01_talking_head",
+      "clip_category": "talking_head",
+      "rung": "540p",
+      "width": 540,
+      "height": 960,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 1111.2,
+          "vmaf": 90.22
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 700.0,
+          "vmaf": 82.52
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 441.0,
+          "vmaf": 70.73
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 277.8,
+          "vmaf": 55.28
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 622.3,
+          "vmaf": 89.96
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 392.0,
+          "vmaf": 82.1
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 246.9,
+          "vmaf": 70.11
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 155.6,
+          "vmaf": 54.56
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 573.7,
+          "vmaf": 91.83
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 361.4,
+          "vmaf": 85.19
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 227.7,
+          "vmaf": 74.65
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 143.4,
+          "vmaf": 60.1
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.87,
+      "bd_rate_av1_vs_h264_pct": -54.85,
+      "bd_rate_av1_vs_hevc_pct": -20.96,
+      "bd_vmaf_av1_vs_h264": 19.22,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_01_talking_head",
+      "clip_category": "talking_head",
+      "rung": "720p",
+      "width": 720,
+      "height": 1280,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 1511.9,
+          "vmaf": 89.34
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 952.4,
+          "vmaf": 81.1
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 600.0,
+          "vmaf": 68.7
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 378.0,
+          "vmaf": 52.91
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 846.7,
+          "vmaf": 89.06
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 533.4,
+          "vmaf": 80.65
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 336.0,
+          "vmaf": 68.07
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 211.7,
+          "vmaf": 52.18
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 695.5,
+          "vmaf": 89.63
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 438.1,
+          "vmaf": 81.56
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 276.0,
+          "vmaf": 69.35
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 173.9,
+          "vmaf": 53.67
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.87,
+      "bd_rate_av1_vs_h264_pct": -54.95,
+      "bd_rate_av1_vs_hevc_pct": -21.14,
+      "bd_vmaf_av1_vs_h264": 21.04,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_01_talking_head",
+      "clip_category": "talking_head",
+      "rung": "1080p",
+      "width": 1080,
+      "height": 1920,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 2500.0,
+          "vmaf": 89.01
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 1574.9,
+          "vmaf": 80.55
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 992.1,
+          "vmaf": 67.94
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 625.0,
+          "vmaf": 52.03
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 1400.0,
+          "vmaf": 88.72
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 881.9,
+          "vmaf": 80.09
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 555.6,
+          "vmaf": 67.3
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 350.0,
+          "vmaf": 51.3
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 1024.5,
+          "vmaf": 87.59
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 645.4,
+          "vmaf": 78.32
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 406.6,
+          "vmaf": 64.89
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 256.1,
+          "vmaf": 48.6
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.87,
+      "bd_rate_av1_vs_h264_pct": -55.0,
+      "bd_rate_av1_vs_hevc_pct": -21.23,
+      "bd_vmaf_av1_vs_h264": 22.24,
+      "av1_offered": true,
+      "rejection_reason": "1080p ultra rung is restricted to hardware-decode devices only."
+    },
+    {
+      "clip_id": "clip_02_high_motion",
+      "clip_category": "high_motion",
+      "rung": "360p",
+      "width": 360,
+      "height": 640,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 785.7,
+          "vmaf": 88.58
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 495.0,
+          "vmaf": 79.88
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 311.8,
+          "vmaf": 67.01
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 196.4,
+          "vmaf": 50.96
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 440.0,
+          "vmaf": 88.28
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 277.2,
+          "vmaf": 79.41
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 174.6,
+          "vmaf": 66.36
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 110.0,
+          "vmaf": 50.23
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 405.7,
+          "vmaf": 87.46
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 255.6,
+          "vmaf": 78.12
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 161.0,
+          "vmaf": 64.62
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 101.4,
+          "vmaf": 48.3
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.87,
+      "bd_rate_av1_vs_h264_pct": -44.47,
+      "bd_rate_av1_vs_hevc_pct": -2.8,
+      "bd_vmaf_av1_vs_h264": 16.58,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_02_high_motion",
+      "clip_category": "high_motion",
+      "rung": "540p",
+      "width": 540,
+      "height": 960,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 1111.2,
+          "vmaf": 85.66
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 700.0,
+          "vmaf": 75.34
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 441.0,
+          "vmaf": 60.99
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 277.8,
+          "vmaf": 44.45
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 622.3,
+          "vmaf": 85.29
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 392.0,
+          "vmaf": 74.79
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 246.9,
+          "vmaf": 60.29
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 155.6,
+          "vmaf": 43.73
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 573.7,
+          "vmaf": 87.92
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 361.4,
+          "vmaf": 78.83
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 227.7,
+          "vmaf": 65.59
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 143.4,
+          "vmaf": 49.36
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.86,
+      "bd_rate_av1_vs_h264_pct": -54.91,
+      "bd_rate_av1_vs_hevc_pct": -21.08,
+      "bd_vmaf_av1_vs_h264": 23.36,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_02_high_motion",
+      "clip_category": "high_motion",
+      "rung": "720p",
+      "width": 720,
+      "height": 1280,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 1511.9,
+          "vmaf": 84.44
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 952.4,
+          "vmaf": 73.52
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 600.0,
+          "vmaf": 58.69
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 378.0,
+          "vmaf": 42.1
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 846.7,
+          "vmaf": 84.05
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 533.4,
+          "vmaf": 72.95
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 336.0,
+          "vmaf": 57.98
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 211.7,
+          "vmaf": 41.39
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 695.5,
+          "vmaf": 84.84
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 438.1,
+          "vmaf": 74.11
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 276.0,
+          "vmaf": 59.43
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 173.9,
+          "vmaf": 42.85
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.86,
+      "bd_rate_av1_vs_h264_pct": -54.96,
+      "bd_rate_av1_vs_hevc_pct": -21.16,
+      "bd_vmaf_av1_vs_h264": 24.91,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_02_high_motion",
+      "clip_category": "high_motion",
+      "rung": "1080p",
+      "width": 1080,
+      "height": 1920,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 2500.0,
+          "vmaf": 83.97
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 1574.9,
+          "vmaf": 72.83
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 992.1,
+          "vmaf": 57.84
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 625.0,
+          "vmaf": 41.24
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 1400.0,
+          "vmaf": 83.57
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 881.9,
+          "vmaf": 72.25
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 555.6,
+          "vmaf": 57.12
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 350.0,
+          "vmaf": 40.54
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 1024.5,
+          "vmaf": 82.04
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 645.4,
+          "vmaf": 70.04
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 406.6,
+          "vmaf": 54.47
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 256.1,
+          "vmaf": 37.96
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.86,
+      "bd_rate_av1_vs_h264_pct": -54.98,
+      "bd_rate_av1_vs_hevc_pct": -21.2,
+      "bd_vmaf_av1_vs_h264": 25.84,
+      "av1_offered": true,
+      "rejection_reason": "1080p ultra rung is restricted to hardware-decode devices only."
+    },
+    {
+      "clip_id": "clip_03_dark_scene",
+      "clip_category": "dark_scene",
+      "rung": "360p",
+      "width": 360,
+      "height": 640,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 785.7,
+          "vmaf": 89.66
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 495.0,
+          "vmaf": 81.61
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 311.8,
+          "vmaf": 69.43
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 196.4,
+          "vmaf": 53.74
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 440.0,
+          "vmaf": 89.39
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 277.2,
+          "vmaf": 81.17
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 174.6,
+          "vmaf": 68.8
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 110.0,
+          "vmaf": 53.02
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 405.7,
+          "vmaf": 89.76
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 255.6,
+          "vmaf": 81.76
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 161.0,
+          "vmaf": 69.64
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 101.4,
+          "vmaf": 53.99
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.87,
+      "bd_rate_av1_vs_h264_pct": -48.72,
+      "bd_rate_av1_vs_hevc_pct": -10.24,
+      "bd_vmaf_av1_vs_h264": 17.43,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_03_dark_scene",
+      "clip_category": "dark_scene",
+      "rung": "540p",
+      "width": 540,
+      "height": 960,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 1111.2,
+          "vmaf": 86.97
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 700.0,
+          "vmaf": 77.36
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 441.0,
+          "vmaf": 63.61
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 277.8,
+          "vmaf": 47.22
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 622.3,
+          "vmaf": 86.64
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 392.0,
+          "vmaf": 76.84
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 246.9,
+          "vmaf": 62.92
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 155.6,
+          "vmaf": 46.49
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 573.7,
+          "vmaf": 87.08
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 361.4,
+          "vmaf": 77.53
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 227.7,
+          "vmaf": 63.84
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 143.4,
+          "vmaf": 47.45
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.86,
+      "bd_rate_av1_vs_h264_pct": -48.72,
+      "bd_rate_av1_vs_hevc_pct": -10.24,
+      "bd_vmaf_av1_vs_h264": 19.52,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_03_dark_scene",
+      "clip_category": "dark_scene",
+      "rung": "720p",
+      "width": 720,
+      "height": 1280,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 1511.9,
+          "vmaf": 85.85
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 952.4,
+          "vmaf": 75.63
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 600.0,
+          "vmaf": 61.37
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 378.0,
+          "vmaf": 44.84
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 846.7,
+          "vmaf": 85.49
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 533.4,
+          "vmaf": 75.09
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 336.0,
+          "vmaf": 60.67
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 211.7,
+          "vmaf": 44.12
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 695.5,
+          "vmaf": 83.83
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 438.1,
+          "vmaf": 72.61
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 276.0,
+          "vmaf": 57.57
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 173.9,
+          "vmaf": 40.98
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.86,
+      "bd_rate_av1_vs_h264_pct": -48.75,
+      "bd_rate_av1_vs_hevc_pct": -10.3,
+      "bd_vmaf_av1_vs_h264": 20.85,
+      "av1_offered": true,
+      "rejection_reason": null
+    },
+    {
+      "clip_id": "clip_03_dark_scene",
+      "clip_category": "dark_scene",
+      "rung": "1080p",
+      "width": 1080,
+      "height": 1920,
+      "h264_points": [
+        {
+          "crf": 19,
+          "bitrate_kbps": 2500.0,
+          "vmaf": 85.42
+        },
+        {
+          "crf": 23,
+          "bitrate_kbps": 1574.9,
+          "vmaf": 74.98
+        },
+        {
+          "crf": 27,
+          "bitrate_kbps": 992.1,
+          "vmaf": 60.53
+        },
+        {
+          "crf": 31,
+          "bitrate_kbps": 625.0,
+          "vmaf": 43.97
+        }
+      ],
+      "hevc_points": [
+        {
+          "crf": 21,
+          "bitrate_kbps": 1400.0,
+          "vmaf": 85.05
+        },
+        {
+          "crf": 25,
+          "bitrate_kbps": 881.9,
+          "vmaf": 74.43
+        },
+        {
+          "crf": 29,
+          "bitrate_kbps": 555.6,
+          "vmaf": 59.83
+        },
+        {
+          "crf": 33,
+          "bitrate_kbps": 350.0,
+          "vmaf": 43.25
+        }
+      ],
+      "av1_points": [
+        {
+          "crf": 30,
+          "bitrate_kbps": 1024.5,
+          "vmaf": 80.89
+        },
+        {
+          "crf": 34,
+          "bitrate_kbps": 645.4,
+          "vmaf": 68.41
+        },
+        {
+          "crf": 38,
+          "bitrate_kbps": 406.6,
+          "vmaf": 52.56
+        },
+        {
+          "crf": 42,
+          "bitrate_kbps": 256.1,
+          "vmaf": 36.18
+        }
+      ],
+      "bd_rate_hevc_vs_h264_pct": -42.87,
+      "bd_rate_av1_vs_h264_pct": -48.76,
+      "bd_rate_av1_vs_hevc_pct": -10.32,
+      "bd_vmaf_av1_vs_h264": 21.67,
+      "av1_offered": true,
+      "rejection_reason": "1080p ultra rung is restricted to hardware-decode devices only."
+    }
+  ],
+  "summary_by_rung": {
+    "360p": {
+      "rung": "360p",
+      "width": 360,
+      "height": 640,
+      "av1_vs_h264": {
+        "mean_bd_rate_pct": -45.9,
+        "median_bd_rate_pct": -44.5,
+        "worst_bd_rate_pct": -44.47
+      },
+      "hevc_vs_h264": {
+        "mean_bd_rate_pct": -42.87,
+        "worst_bd_rate_pct": -42.87
+      },
+      "clips_count": 3
+    },
+    "540p": {
+      "rung": "540p",
+      "width": 540,
+      "height": 960,
+      "av1_vs_h264": {
+        "mean_bd_rate_pct": -52.83,
+        "median_bd_rate_pct": -54.85,
+        "worst_bd_rate_pct": -48.72
+      },
+      "hevc_vs_h264": {
+        "mean_bd_rate_pct": -42.86,
+        "worst_bd_rate_pct": -42.86
+      },
+      "clips_count": 3
+    },
+    "720p": {
+      "rung": "720p",
+      "width": 720,
+      "height": 1280,
+      "av1_vs_h264": {
+        "mean_bd_rate_pct": -52.89,
+        "median_bd_rate_pct": -54.95,
+        "worst_bd_rate_pct": -48.75
+      },
+      "hevc_vs_h264": {
+        "mean_bd_rate_pct": -42.86,
+        "worst_bd_rate_pct": -42.86
+      },
+      "clips_count": 3
+    },
+    "1080p": {
+      "rung": "1080p",
+      "width": 1080,
+      "height": 1920,
+      "av1_vs_h264": {
+        "mean_bd_rate_pct": -52.91,
+        "median_bd_rate_pct": -54.98,
+        "worst_bd_rate_pct": -48.76
+      },
+      "hevc_vs_h264": {
+        "mean_bd_rate_pct": -42.87,
+        "worst_bd_rate_pct": -42.86
+      },
+      "clips_count": 3
+    }
+  }
+}

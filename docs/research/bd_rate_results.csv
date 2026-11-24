@@ -1,0 +1,13 @@
+clip_id,category,rung,resolution,bd_rate_hevc_vs_h264_pct,bd_rate_av1_vs_h264_pct,bd_rate_av1_vs_hevc_pct,bd_vmaf_av1_vs_h264,av1_offered,notes
+clip_01_talking_head,talking_head,360p,360x640,-42.87,-44.5,-2.83,13.35,True,Passed
+clip_01_talking_head,talking_head,540p,540x960,-42.87,-54.85,-20.96,19.22,True,Passed
+clip_01_talking_head,talking_head,720p,720x1280,-42.87,-54.95,-21.14,21.04,True,Passed
+clip_01_talking_head,talking_head,1080p,1080x1920,-42.87,-55.0,-21.23,22.24,True,1080p ultra rung is restricted to hardware-decode devices only.
+clip_02_high_motion,high_motion,360p,360x640,-42.87,-44.47,-2.8,16.58,True,Passed
+clip_02_high_motion,high_motion,540p,540x960,-42.86,-54.91,-21.08,23.36,True,Passed
+clip_02_high_motion,high_motion,720p,720x1280,-42.86,-54.96,-21.16,24.91,True,Passed
+clip_02_high_motion,high_motion,1080p,1080x1920,-42.86,-54.98,-21.2,25.84,True,1080p ultra rung is restricted to hardware-decode devices only.
+clip_03_dark_scene,dark_scene,360p,360x640,-42.87,-48.72,-10.24,17.43,True,Passed
+clip_03_dark_scene,dark_scene,540p,540x960,-42.86,-48.72,-10.24,19.52,True,Passed
+clip_03_dark_scene,dark_scene,720p,720x1280,-42.86,-48.75,-10.3,20.85,True,Passed
+clip_03_dark_scene,dark_scene,1080p,1080x1920,-42.87,-48.76,-10.32,21.67,True,1080p ultra rung is restricted to hardware-decode devices only.

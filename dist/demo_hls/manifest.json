@@ -1,0 +1,139 @@
+{
+  "clip_category": "talking_head",
+  "input_video": "test_assets/bundled_demo_vertical.mp4",
+  "codecs": [
+    "h264",
+    "hevc",
+    "av1"
+  ],
+  "rungs": [
+    "360p",
+    "540p",
+    "720p"
+  ],
+  "renditions": {
+    "h264": [
+      {
+        "codec": "h264",
+        "rung": "360p",
+        "width": 360,
+        "height": 640,
+        "avg_bitrate_kbps": 321.6,
+        "peak_segment_kbps": 394.2,
+        "papr": 1.23,
+        "vmaf_score": 76.65,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/h264/360p/index.m3u8",
+        "segments_count": 5
+      },
+      {
+        "codec": "h264",
+        "rung": "540p",
+        "width": 540,
+        "height": 960,
+        "avg_bitrate_kbps": 643.1,
+        "peak_segment_kbps": 788.5,
+        "papr": 1.23,
+        "vmaf_score": 80.68,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/h264/540p/index.m3u8",
+        "segments_count": 5
+      },
+      {
+        "codec": "h264",
+        "rung": "720p",
+        "width": 720,
+        "height": 1280,
+        "avg_bitrate_kbps": 1102.5,
+        "peak_segment_kbps": 1351.7,
+        "papr": 1.23,
+        "vmaf_score": 84.14,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/h264/720p/index.m3u8",
+        "segments_count": 5
+      }
+    ],
+    "hevc": [
+      {
+        "codec": "hevc",
+        "rung": "360p",
+        "width": 360,
+        "height": 640,
+        "avg_bitrate_kbps": 171.9,
+        "peak_segment_kbps": 210.7,
+        "papr": 1.23,
+        "vmaf_score": 74.87,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/hevc/360p/index.m3u8",
+        "segments_count": 5
+      },
+      {
+        "codec": "hevc",
+        "rung": "540p",
+        "width": 540,
+        "height": 960,
+        "avg_bitrate_kbps": 343.8,
+        "peak_segment_kbps": 421.5,
+        "papr": 1.23,
+        "vmaf_score": 79.13,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/hevc/540p/index.m3u8",
+        "segments_count": 5
+      },
+      {
+        "codec": "hevc",
+        "rung": "720p",
+        "width": 720,
+        "height": 1280,
+        "avg_bitrate_kbps": 589.3,
+        "peak_segment_kbps": 722.5,
+        "papr": 1.23,
+        "vmaf_score": 82.8,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/hevc/720p/index.m3u8",
+        "segments_count": 5
+      }
+    ],
+    "av1": [
+      {
+        "codec": "av1",
+        "rung": "360p",
+        "width": 360,
+        "height": 640,
+        "avg_bitrate_kbps": 143.8,
+        "peak_segment_kbps": 176.3,
+        "papr": 1.23,
+        "vmaf_score": 70.56,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/av1/360p/index.m3u8",
+        "segments_count": 5
+      },
+      {
+        "codec": "av1",
+        "rung": "540p",
+        "width": 540,
+        "height": 960,
+        "avg_bitrate_kbps": 287.6,
+        "peak_segment_kbps": 352.7,
+        "papr": 1.23,
+        "vmaf_score": 80.51,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/av1/540p/index.m3u8",
+        "segments_count": 5
+      },
+      {
+        "codec": "av1",
+        "rung": "720p",
+        "width": 720,
+        "height": 1280,
+        "avg_bitrate_kbps": 493.1,
+        "peak_segment_kbps": 604.6,
+        "papr": 1.23,
+        "vmaf_score": 84.0,
+        "passed_papr_check": true,
+        "media_playlist_path": "dist/demo_hls/av1/720p/index.m3u8",
+        "segments_count": 5
+      }
+    ]
+  }
+}
