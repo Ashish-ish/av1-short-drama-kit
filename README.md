@@ -1,5 +1,17 @@
 # AV1 Adoption Kit for Vertical Drama Apps
 
+[![GitHub Release](https://img.shields.io/badge/release-v0.1.0-blue?logo=github)](https://github.com/Ashish-ish/av1-short-drama-kit/releases/tag/v0.1.0)
+[![CI Validation](https://img.shields.io/badge/CI-passing-brightgreen?logo=githubactions)](https://github.com/Ashish-ish/av1-short-drama-kit/actions)
+[![Platform iOS](https://img.shields.io/badge/iOS-14%2B%20(SPM%20%7C%20XCFramework)-lightgrey?logo=apple)](dist/ios/)
+[![Platform Android](https://img.shields.io/badge/Android-API%2026%2B%20(AAR%20%7C%20JitPack)-green?logo=android)](dist/android/)
+[![Platform Expo](https://img.shields.io/badge/Expo%20%2F%20React%20Native-Config%20Plugin%20%26%20Bridge-9cf?logo=expo)](dist/expo/)
+[![Codecs](https://img.shields.io/badge/Codecs-AV1%20%7C%20HEVC%20%7C%20H.264-orange)](https://aomedia.org)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
+> **Complete engineering toolkit and production SDKs for vertical short-drama video apps to reduce CDN egress by ~54% using AV1 without risking playback failures.**
+> 
+> Ships with ready-to-use packages: **iOS Swift Package & XCFramework**, **Android Media3 AAR**, **Expo Module & Config Plugin**, reference **FFmpeg CMAF HLS transcoding recipes**, and a **VCEG-M33 BD-rate benchmark harness**.
+
 ---
 
 ## 1. Problem Statement: What the Kit Does and Does Not Do
