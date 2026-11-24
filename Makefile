@@ -1,4 +1,4 @@
-.PHONY: all check test bench demo-encode clean help
+.PHONY: all check test bench demo-encode sdk sdk-ios sdk-android sdk-expo clean help
 
 PYTHON ?= PYTHONPATH=. python3
 NODE ?= node
@@ -9,11 +9,31 @@ help:
 	@echo "AV1 Adoption Kit for Vertical Drama Apps"
 	@echo ""
 	@echo "Available commands:"
+	@echo "  make sdk           Build all SDKs: iOS XCFramework, Android AAR, Expo/RN package"
+	@echo "  make sdk-ios       Build iOS XCFramework and zip archive"
+	@echo "  make sdk-android   Build Android AAR, sources jar, and POM"
+	@echo "  make sdk-expo      Build Expo module, config plugin, and npm package tarball"
 	@echo "  make demo-encode   Run reproducible encode pipeline on bundled 10s vertical clip"
 	@echo "  make bench         Run full multi-codec benchmark, calculate BD-rates, generate RD curves"
 	@echo "  make check         Execute full validation suite (Python & React Native tests)"
 	@echo "  make clean         Remove build artifacts and temporary files"
 	@echo ""
+
+sdk: sdk-ios sdk-android sdk-expo
+	@echo "==> All SDKs built successfully in dist/:"
+	@ls -lh dist/ios dist/android dist/expo
+
+sdk-ios:
+	@echo "==> Building iOS XCFramework & SPM package..."
+	$(PYTHON) ios/build_xcframework.py
+
+sdk-android:
+	@echo "==> Building Android AAR & Maven artifacts..."
+	$(PYTHON) android/build_sdk_aar.py
+
+sdk-expo:
+	@echo "==> Building Expo / React Native package tarball..."
+	$(PYTHON) react-native/build_package.py
 
 demo-encode:
 	@echo "==> Running demo encode on bundled 10-second vertical clip..."

@@ -19,7 +19,199 @@ The kit comprises four integrated modules:
 
 ---
 
-## 2. Codec Decision Matrix: H.264, HEVC, or AV1
+## 2. SDK Installation & Distribution
+
+The policy and preload libraries are packaged as production-ready SDKs across all major mobile frameworks:
+
+```
+dist/
+├── ios/
+│   ├── AV1Policy.xcframework/           # Universal binary framework (iOS Device + Simulator)
+│   ├── AV1Policy.xcframework.zip        # Carthage / binaryTarget SPM distributable
+│   └── AV1Policy.xcframework.zip.sha256
+├── android/
+│   ├── av1-policy-0.1.0.aar             # Precompiled Android AAR with Proguard consumer rules
+│   ├── av1-policy-0.1.0-sources.jar     # Java / Kotlin sources
+│   ├── av1-policy-0.1.0.pom             # Maven POM declaring Media3 dependencies
+│   └── av1-policy-0.1.0.aar.sha256
+└── expo/
+    ├── av1-vertical-drama-bridge-0.1.0.tgz       # Installable npm package with Expo Config Plugin
+    └── av1-vertical-drama-bridge-0.1.0.tgz.sha256
+```
+
+### 2.1 iOS Installation
+
+#### Option A: Swift Package Manager (Recommended)
+Add the package dependency in Xcode (`File` ➔ `Add Package Dependencies...`) using the repository URL:
+```
+https://github.com/Ashish-ish/av1-short-drama-kit.git
+```
+Or in your `Package.swift`:
+```swift
+dependencies: [
+    .package(url: "https://github.com/Ashish-ish/av1-short-drama-kit.git", from: "0.1.0")
+]
+```
+
+#### Option B: Standalone XCFramework (No SPM required)
+1. Download [AV1Policy.xcframework.zip](file:///Users/ashish/Projects/av1decoder/dist/ios/AV1Policy.xcframework.zip) from `dist/ios/`.
+2. Unzip and drag `AV1Policy.xcframework` into your Xcode target's **Frameworks, Libraries, and Embedded Content**.
+3. Select **Embed & Sign**.
+
+```swift
+import AV1Policy
+
+let profile = AV1PolicyManager.shared.getPlaybackProfile(
+    h264Master: URL(string: "https://cdn.example.com/drama/master_h264.m3u8")!,
+    hevcMaster: URL(string: "https://cdn.example.com/drama/master_hevc.m3u8"),
+    av1Master: URL(string: "https://cdn.example.com/drama/master_av1.m3u8")
+)
+```
+
+---
+
+### 2.2 Android Installation
+
+#### Option A: Gradle Dependency via JitPack
+Add JitPack to your `settings.gradle`:
+```groovy
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Add to `app/build.gradle`:
+```groovy
+dependencies {
+    implementation 'com.github.Ashish-ish:av1-short-drama-kit:v0.1.0'
+    implementation 'androidx.media3:media3-exoplayer:1.3.1'
+    implementation 'androidx.media3:media3-exoplayer-hls:1.3.1'
+    implementation 'androidx.media3:media3-common:1.3.1'
+}
+```
+
+#### Option B: Direct AAR Import
+Copy [av1-policy-0.1.0.aar](file:///Users/ashish/Projects/av1decoder/dist/android/av1-policy-0.1.0.aar) into your app's `libs/` folder:
+```groovy
+dependencies {
+    implementation files("libs/av1-policy-0.1.0.aar")
+    implementation "androidx.media3:media3-exoplayer:1.3.1"
+    implementation "androidx.media3:media3-exoplayer-hls:1.3.1"
+    implementation "androidx.media3:media3-common:1.3.1"
+}
+```
+
+```java
+import com.verticaldrama.av1policy.PlaybackPolicyManager;
+import com.verticaldrama.av1policy.Av1MediaCodecSelector;
+
+PlaybackPolicyManager manager = new PlaybackPolicyManager(context);
+PlaybackPolicyManager.PlaybackProfile profile = manager.getPlaybackProfile(
+    "https://cdn.example.com/drama/master_h264.m3u8",
+    "https://cdn.example.com/drama/master_hevc.m3u8",
+    "https://cdn.example.com/drama/master_av1.m3u8",
+    false // hasDrm
+);
+
+// Inject custom platform dav1d MediaCodecSelector into ExoPlayer
+ExoPlayer player = new ExoPlayer.Builder(context)
+    .setMediaCodecSelector(new Av1MediaCodecSelector(manager))
+    .build();
+```
+
+---
+
+### 2.3 React Native & Expo Installation
+
+#### Expo Managed & EAS Build
+Install the bridge and register the Expo Config Plugin:
+```bash
+# Direct npm/expo install
+npx expo install av1-vertical-drama-bridge
+
+# Or install from pre-bundled SDK package:
+npx expo install ./dist/expo/av1-vertical-drama-bridge-0.1.0.tgz
+```
+
+In `app.json` / `app.config.js`:
+```json
+{
+  "expo": {
+    "plugins": [
+      "av1-vertical-drama-bridge"
+    ]
+  }
+}
+```
+
+#### Bare React Native
+```bash
+npm install av1-vertical-drama-bridge
+# or
+npm install ./dist/expo/av1-vertical-drama-bridge-0.1.0.tgz
+```
+
+**Using with `expo-video`:**
+```typescript
+import { useVideoPlayer, VideoView } from 'expo-video';
+import { getExpoVideoConfig } from 'av1-vertical-drama-bridge';
+
+const config = await getExpoVideoConfig({
+  h264: 'https://cdn.example.com/drama/master_h264.m3u8',
+  hevc: 'https://cdn.example.com/drama/master_hevc.m3u8',
+  av1: 'https://cdn.example.com/drama/master_av1.m3u8',
+});
+
+const player = useVideoPlayer(config.source.uri, p => {
+  p.loop = true;
+  p.play();
+});
+
+return <VideoView player={player} style={{ width: '100%', height: '100%' }} />;
+```
+
+**Using with `react-native-video`:**
+```typescript
+import Video from 'react-native-video';
+import { getReactNativeVideoConfig } from 'av1-vertical-drama-bridge';
+
+const config = await getReactNativeVideoConfig({
+  h264: 'https://cdn.example.com/drama/master_h264.m3u8',
+  hevc: 'https://cdn.example.com/drama/master_hevc.m3u8',
+  av1: 'https://cdn.example.com/drama/master_av1.m3u8',
+});
+
+return (
+  <Video
+    source={config.source}
+    bufferConfig={config.bufferConfig}
+    resizeMode="cover"
+    style={{ width: '100%', height: '100%' }}
+  />
+);
+```
+
+---
+
+### 2.4 Regenerating SDKs from Source
+
+All SDK artifacts can be regenerated with a single command via the included build toolchain:
+```bash
+# Build all SDK formats (iOS XCFramework, Android AAR, Expo tarball)
+make sdk
+
+# Or individual targets:
+make sdk-ios       # Compiles Swift module evolution slices and packages XCFramework + zip
+make sdk-android   # Compiles Java bytecode and packages AAR + sources + POM
+make sdk-expo      # Compiles JS/TS declarations and packages npm tarball
+```
+
+---
+
+## 3. Codec Decision Matrix: H.264, HEVC, or AV1
 
 The kit treats codec adoption as an empirical optimization problem governed by [ADR-003: Codec Decision Matrix and Per-Title Gate](file:///Users/ashish/Projects/av1decoder/docs/adr/ADR-003-codec-decision-matrix-and-per-title-gate.md).
 

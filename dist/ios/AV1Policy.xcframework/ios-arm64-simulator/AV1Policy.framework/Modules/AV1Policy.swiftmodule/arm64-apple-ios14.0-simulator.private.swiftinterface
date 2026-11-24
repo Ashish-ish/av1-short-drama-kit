@@ -1,0 +1,73 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.4.2 effective-5.10 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -language-mode 5 -O -module-name AV1Policy
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4.2
+import AVFoundation
+import CoreMedia
+import Foundation
+import Swift
+import VideoToolbox
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class AV1MetricsCollector {
+  public struct MetricsSummary {
+    public let startupTimeSeconds: Swift::Double
+    public let totalDroppedFrames: Swift::Int
+    public let numberOfStalls: Swift::Int
+    public let indicatedBitrate: Swift::Double
+    public let observedBitrate: Swift::Double
+  }
+  public static func inspectMetrics(for playerItem: AVFoundation::AVPlayerItem?) -> AV1Policy::AV1MetricsCollector.AV1Policy::MetricsSummary?
+  @objc deinit
+}
+public protocol AV1PlaybackControllerDelegate : AnyObject {
+  func didTriggerFallback(toH264Master url: Foundation::URL, resumeTime: CoreMedia::CMTime, reason: Swift::String)
+  func didUpdateMetrics(ttffSeconds: Swift::Double, droppedFrames: Swift::Int, stalls: Swift::Int)
+}
+@objc @_inheritsConvenienceInitializers public class AV1PlaybackController : ObjectiveC::NSObject {
+  final public let player: AVFoundation::AVPlayer
+  weak public var delegate: (any AV1Policy::AV1PlaybackControllerDelegate)?
+  public var activeProfile: AV1Policy::PlaybackProfile? {
+    get
+  }
+  public var h264FallbackURL: Foundation::URL? {
+    get
+  }
+  public var isFallbackActive: Swift::Bool {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+  public func loadVideo(h264Master: Foundation::URL, hevcMaster: Foundation::URL? = nil, av1Master: Foundation::URL? = nil)
+  public func triggerFallback(reason: Swift::String)
+}
+public enum PlaybackCodec : Swift::String, Swift::Codable {
+  case h264
+  case hevc
+  case av1
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public struct PlaybackProfile {
+  public let selectedURL: Foundation::URL
+  public let codec: AV1Policy::PlaybackCodec
+  public let maxRung: Swift::String
+  public let isHardwareDecode: Swift::Bool
+  public let reasonCode: Swift::String
+  public init(selectedURL: Foundation::URL, codec: AV1Policy::PlaybackCodec, maxRung: Swift::String, isHardwareDecode: Swift::Bool, reasonCode: Swift::String)
+}
+public class AV1PolicyManager {
+  public static let shared: AV1Policy::AV1PolicyManager
+  public init()
+  public func isHardwareAV1Supported() -> Swift::Bool
+  public func isHardwareHEVCSupported() -> Swift::Bool
+  public func getPlaybackProfile(h264Master: Foundation::URL, hevcMaster: Foundation::URL? = nil, av1Master: Foundation::URL? = nil) -> AV1Policy::PlaybackProfile
+  @objc deinit
+}
+extension AV1Policy::PlaybackCodec : Swift::Equatable {}
+extension AV1Policy::PlaybackCodec : Swift::Hashable {}
+extension AV1Policy::PlaybackCodec : Swift::RawRepresentable {}

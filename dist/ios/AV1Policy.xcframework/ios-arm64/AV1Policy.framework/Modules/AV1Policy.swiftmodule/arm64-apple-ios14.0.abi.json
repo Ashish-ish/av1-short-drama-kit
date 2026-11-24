@@ -1,0 +1,1826 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "AV1Policy",
+    "printedName": "AV1Policy",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AV1MetricsCollector",
+        "printedName": "AV1MetricsCollector",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "MetricsSummary",
+            "printedName": "MetricsSummary",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "startupTimeSeconds",
+                "printedName": "startupTimeSeconds",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV18startupTimeSecondsSdvp",
+                "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV18startupTimeSecondsSdvp",
+                "moduleName": "AV1Policy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV18startupTimeSecondsSdvg",
+                    "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV18startupTimeSecondsSdvg",
+                    "moduleName": "AV1Policy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "totalDroppedFrames",
+                "printedName": "totalDroppedFrames",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV18totalDroppedFramesSivp",
+                "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV18totalDroppedFramesSivp",
+                "moduleName": "AV1Policy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV18totalDroppedFramesSivg",
+                    "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV18totalDroppedFramesSivg",
+                    "moduleName": "AV1Policy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "numberOfStalls",
+                "printedName": "numberOfStalls",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV14numberOfStallsSivp",
+                "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV14numberOfStallsSivp",
+                "moduleName": "AV1Policy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV14numberOfStallsSivg",
+                    "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV14numberOfStallsSivg",
+                    "moduleName": "AV1Policy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "indicatedBitrate",
+                "printedName": "indicatedBitrate",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV16indicatedBitrateSdvp",
+                "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV16indicatedBitrateSdvp",
+                "moduleName": "AV1Policy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV16indicatedBitrateSdvg",
+                    "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV16indicatedBitrateSdvg",
+                    "moduleName": "AV1Policy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "observedBitrate",
+                "printedName": "observedBitrate",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV15observedBitrateSdvp",
+                "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV15observedBitrateSdvp",
+                "moduleName": "AV1Policy",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV15observedBitrateSdvg",
+                    "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV15observedBitrateSdvg",
+                    "moduleName": "AV1Policy",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV",
+            "mangledName": "$s9AV1Policy0A16MetricsCollectorC0C7SummaryV",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "inspectMetrics",
+            "printedName": "inspectMetrics(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AV1Policy.AV1MetricsCollector.MetricsSummary?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MetricsSummary",
+                    "printedName": "AV1Policy.AV1MetricsCollector.MetricsSummary",
+                    "usr": "s:9AV1Policy0A16MetricsCollectorC0C7SummaryV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVPlayerItem?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVPlayerItem",
+                    "printedName": "AVFoundation.AVPlayerItem",
+                    "usr": "c:objc(cs)AVPlayerItem"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0A16MetricsCollectorC07inspectC03forAC0C7SummaryVSgSo12AVPlayerItemCSg_tFZ",
+            "mangledName": "$s9AV1Policy0A16MetricsCollectorC07inspectC03forAC0C7SummaryVSgSo12AVPlayerItemCSg_tFZ",
+            "moduleName": "AV1Policy",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9AV1Policy0A16MetricsCollectorC",
+        "mangledName": "$s9AV1Policy0A16MetricsCollectorC",
+        "moduleName": "AV1Policy",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMedia",
+        "printedName": "CoreMedia",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AV1PlaybackControllerDelegate",
+        "printedName": "AV1PlaybackControllerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didTriggerFallback",
+            "printedName": "didTriggerFallback(toH264Master:resumeTime:reason:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0A26PlaybackControllerDelegateP18didTriggerFallback12toH264Master10resumeTime6reasony10Foundation3URLV_So6CMTimeaSStF",
+            "mangledName": "$s9AV1Policy0A26PlaybackControllerDelegateP18didTriggerFallback12toH264Master10resumeTime6reasony10Foundation3URLV_So6CMTimeaSStF",
+            "moduleName": "AV1Policy",
+            "genericSig": "<τ_0_0 where τ_0_0 : AV1Policy.AV1PlaybackControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : AV1Policy.AV1PlaybackControllerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didUpdateMetrics",
+            "printedName": "didUpdateMetrics(ttffSeconds:droppedFrames:stalls:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0A26PlaybackControllerDelegateP16didUpdateMetrics11ttffSeconds13droppedFrames6stallsySd_S2itF",
+            "mangledName": "$s9AV1Policy0A26PlaybackControllerDelegateP16didUpdateMetrics11ttffSeconds13droppedFrames6stallsySd_S2itF",
+            "moduleName": "AV1Policy",
+            "genericSig": "<τ_0_0 where τ_0_0 : AV1Policy.AV1PlaybackControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : AV1Policy.AV1PlaybackControllerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:9AV1Policy0A26PlaybackControllerDelegateP",
+        "mangledName": "$s9AV1Policy0A26PlaybackControllerDelegateP",
+        "moduleName": "AV1Policy",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AV1PlaybackController",
+        "printedName": "AV1PlaybackController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "player",
+            "printedName": "player",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVPlayer",
+                "printedName": "AVFoundation.AVPlayer",
+                "usr": "c:objc(cs)AVPlayer"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy0A18PlaybackControllerC6playerSo8AVPlayerCvp",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerC6playerSo8AVPlayerCvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVPlayer",
+                    "printedName": "AVFoundation.AVPlayer",
+                    "usr": "c:objc(cs)AVPlayer"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0A18PlaybackControllerC6playerSo8AVPlayerCvg",
+                "mangledName": "$s9AV1Policy0A18PlaybackControllerC6playerSo8AVPlayerCvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any AV1Policy.AV1PlaybackControllerDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvp",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any AV1Policy.AV1PlaybackControllerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AV1PlaybackControllerDelegate",
+                        "printedName": "any AV1Policy.AV1PlaybackControllerDelegate",
+                        "usr": "s:9AV1Policy0A26PlaybackControllerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvg",
+                "mangledName": "$s9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any AV1Policy.AV1PlaybackControllerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AV1PlaybackControllerDelegate",
+                        "printedName": "any AV1Policy.AV1PlaybackControllerDelegate",
+                        "usr": "s:9AV1Policy0A26PlaybackControllerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvs",
+                "mangledName": "$s9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvs",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvM",
+                "mangledName": "$s9AV1Policy0A18PlaybackControllerC8delegateAA0acD8Delegate_pSgvM",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "activeProfile",
+            "printedName": "activeProfile",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AV1Policy.PlaybackProfile?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackProfile",
+                    "printedName": "AV1Policy.PlaybackProfile",
+                    "usr": "s:9AV1Policy15PlaybackProfileV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy0A18PlaybackControllerC13activeProfileAA0cF0VSgvp",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerC13activeProfileAA0cF0VSgvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AV1Policy.PlaybackProfile?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackProfile",
+                        "printedName": "AV1Policy.PlaybackProfile",
+                        "usr": "s:9AV1Policy15PlaybackProfileV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0A18PlaybackControllerC13activeProfileAA0cF0VSgvg",
+                "mangledName": "$s9AV1Policy0A18PlaybackControllerC13activeProfileAA0cF0VSgvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "h264FallbackURL",
+            "printedName": "h264FallbackURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy0A18PlaybackControllerC15h264FallbackURL10Foundation0G0VSgvp",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerC15h264FallbackURL10Foundation0G0VSgvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0A18PlaybackControllerC15h264FallbackURL10Foundation0G0VSgvg",
+                "mangledName": "$s9AV1Policy0A18PlaybackControllerC15h264FallbackURL10Foundation0G0VSgvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isFallbackActive",
+            "printedName": "isFallbackActive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy0A18PlaybackControllerC16isFallbackActiveSbvp",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerC16isFallbackActiveSbvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0A18PlaybackControllerC16isFallbackActiveSbvg",
+                "mangledName": "$s9AV1Policy0A18PlaybackControllerC16isFallbackActiveSbvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AV1PlaybackController",
+                "printedName": "AV1Policy.AV1PlaybackController",
+                "usr": "c:@M@AV1Policy@objc(cs)AV1PlaybackController"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AV1Policy@objc(cs)AV1PlaybackController(im)init",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerCACycfc",
+            "moduleName": "AV1Policy",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "loadVideo",
+            "printedName": "loadVideo(h264Master:hevcMaster:av1Master:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0A18PlaybackControllerC9loadVideo10h264Master04hevcH003av1H0y10Foundation3URLV_AJSgAKtF",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerC9loadVideo10h264Master04hevcH003av1H0y10Foundation3URLV_AJSgAKtF",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "triggerFallback",
+            "printedName": "triggerFallback(reason:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0A18PlaybackControllerC15triggerFallback6reasonySS_tF",
+            "mangledName": "$s9AV1Policy0A18PlaybackControllerC15triggerFallback6reasonySS_tF",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AV1Policy@objc(cs)AV1PlaybackController",
+        "mangledName": "$s9AV1Policy0A18PlaybackControllerC",
+        "moduleName": "AV1Policy",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "Import",
+        "name": "VideoToolbox",
+        "printedName": "VideoToolbox",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMedia",
+        "printedName": "CoreMedia",
+        "declKind": "Import",
+        "moduleName": "AV1Policy"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaybackCodec",
+        "printedName": "PlaybackCodec",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "h264",
+            "printedName": "h264",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AV1Policy.PlaybackCodec.Type) -> AV1Policy.PlaybackCodec",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackCodec",
+                    "printedName": "AV1Policy.PlaybackCodec",
+                    "usr": "s:9AV1Policy13PlaybackCodecO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AV1Policy.PlaybackCodec.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackCodec",
+                        "printedName": "AV1Policy.PlaybackCodec",
+                        "usr": "s:9AV1Policy13PlaybackCodecO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AV1Policy13PlaybackCodecO4h264yA2CmF",
+            "mangledName": "$s9AV1Policy13PlaybackCodecO4h264yA2CmF",
+            "moduleName": "AV1Policy"
+          },
+          {
+            "kind": "Var",
+            "name": "hevc",
+            "printedName": "hevc",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AV1Policy.PlaybackCodec.Type) -> AV1Policy.PlaybackCodec",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackCodec",
+                    "printedName": "AV1Policy.PlaybackCodec",
+                    "usr": "s:9AV1Policy13PlaybackCodecO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AV1Policy.PlaybackCodec.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackCodec",
+                        "printedName": "AV1Policy.PlaybackCodec",
+                        "usr": "s:9AV1Policy13PlaybackCodecO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AV1Policy13PlaybackCodecO4hevcyA2CmF",
+            "mangledName": "$s9AV1Policy13PlaybackCodecO4hevcyA2CmF",
+            "moduleName": "AV1Policy"
+          },
+          {
+            "kind": "Var",
+            "name": "av1",
+            "printedName": "av1",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AV1Policy.PlaybackCodec.Type) -> AV1Policy.PlaybackCodec",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackCodec",
+                    "printedName": "AV1Policy.PlaybackCodec",
+                    "usr": "s:9AV1Policy13PlaybackCodecO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "AV1Policy.PlaybackCodec.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaybackCodec",
+                        "printedName": "AV1Policy.PlaybackCodec",
+                        "usr": "s:9AV1Policy13PlaybackCodecO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9AV1Policy13PlaybackCodecO3av1yA2CmF",
+            "mangledName": "$s9AV1Policy13PlaybackCodecO3av1yA2CmF",
+            "moduleName": "AV1Policy"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AV1Policy.PlaybackCodec?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackCodec",
+                    "printedName": "AV1Policy.PlaybackCodec",
+                    "usr": "s:9AV1Policy13PlaybackCodecO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AV1Policy13PlaybackCodecO8rawValueACSgSS_tcfc",
+            "mangledName": "$s9AV1Policy13PlaybackCodecO8rawValueACSgSS_tcfc",
+            "moduleName": "AV1Policy",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy13PlaybackCodecO8rawValueSSvp",
+            "mangledName": "$s9AV1Policy13PlaybackCodecO8rawValueSSvp",
+            "moduleName": "AV1Policy",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy13PlaybackCodecO8rawValueSSvg",
+                "mangledName": "$s9AV1Policy13PlaybackCodecO8rawValueSSvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9AV1Policy13PlaybackCodecO",
+        "mangledName": "$s9AV1Policy13PlaybackCodecO",
+        "moduleName": "AV1Policy",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaybackProfile",
+        "printedName": "PlaybackProfile",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "selectedURL",
+            "printedName": "selectedURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy15PlaybackProfileV11selectedURL10Foundation0F0Vvp",
+            "mangledName": "$s9AV1Policy15PlaybackProfileV11selectedURL10Foundation0F0Vvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy15PlaybackProfileV11selectedURL10Foundation0F0Vvg",
+                "mangledName": "$s9AV1Policy15PlaybackProfileV11selectedURL10Foundation0F0Vvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "codec",
+            "printedName": "codec",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaybackCodec",
+                "printedName": "AV1Policy.PlaybackCodec",
+                "usr": "s:9AV1Policy13PlaybackCodecO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy15PlaybackProfileV5codecAA0C5CodecOvp",
+            "mangledName": "$s9AV1Policy15PlaybackProfileV5codecAA0C5CodecOvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaybackCodec",
+                    "printedName": "AV1Policy.PlaybackCodec",
+                    "usr": "s:9AV1Policy13PlaybackCodecO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy15PlaybackProfileV5codecAA0C5CodecOvg",
+                "mangledName": "$s9AV1Policy15PlaybackProfileV5codecAA0C5CodecOvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxRung",
+            "printedName": "maxRung",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy15PlaybackProfileV7maxRungSSvp",
+            "mangledName": "$s9AV1Policy15PlaybackProfileV7maxRungSSvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy15PlaybackProfileV7maxRungSSvg",
+                "mangledName": "$s9AV1Policy15PlaybackProfileV7maxRungSSvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isHardwareDecode",
+            "printedName": "isHardwareDecode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy15PlaybackProfileV16isHardwareDecodeSbvp",
+            "mangledName": "$s9AV1Policy15PlaybackProfileV16isHardwareDecodeSbvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy15PlaybackProfileV16isHardwareDecodeSbvg",
+                "mangledName": "$s9AV1Policy15PlaybackProfileV16isHardwareDecodeSbvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reasonCode",
+            "printedName": "reasonCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy15PlaybackProfileV10reasonCodeSSvp",
+            "mangledName": "$s9AV1Policy15PlaybackProfileV10reasonCodeSSvp",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy15PlaybackProfileV10reasonCodeSSvg",
+                "mangledName": "$s9AV1Policy15PlaybackProfileV10reasonCodeSSvg",
+                "moduleName": "AV1Policy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(selectedURL:codec:maxRung:isHardwareDecode:reasonCode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaybackProfile",
+                "printedName": "AV1Policy.PlaybackProfile",
+                "usr": "s:9AV1Policy15PlaybackProfileV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaybackCodec",
+                "printedName": "AV1Policy.PlaybackCodec",
+                "usr": "s:9AV1Policy13PlaybackCodecO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AV1Policy15PlaybackProfileV11selectedURL5codec7maxRung16isHardwareDecode10reasonCodeAC10Foundation0F0V_AA0C5CodecOSSSbSStcfc",
+            "mangledName": "$s9AV1Policy15PlaybackProfileV11selectedURL5codec7maxRung16isHardwareDecode10reasonCodeAC10Foundation0F0V_AA0C5CodecOSSSbSStcfc",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9AV1Policy15PlaybackProfileV",
+        "mangledName": "$s9AV1Policy15PlaybackProfileV",
+        "moduleName": "AV1Policy",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AV1PolicyManager",
+        "printedName": "AV1PolicyManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AV1PolicyManager",
+                "printedName": "AV1Policy.AV1PolicyManager",
+                "usr": "s:9AV1Policy0aB7ManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AV1Policy0aB7ManagerC6sharedACvpZ",
+            "mangledName": "$s9AV1Policy0aB7ManagerC6sharedACvpZ",
+            "moduleName": "AV1Policy",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AV1PolicyManager",
+                    "printedName": "AV1Policy.AV1PolicyManager",
+                    "usr": "s:9AV1Policy0aB7ManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AV1Policy0aB7ManagerC6sharedACvgZ",
+                "mangledName": "$s9AV1Policy0aB7ManagerC6sharedACvgZ",
+                "moduleName": "AV1Policy",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AV1PolicyManager",
+                "printedName": "AV1Policy.AV1PolicyManager",
+                "usr": "s:9AV1Policy0aB7ManagerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AV1Policy0aB7ManagerCACycfc",
+            "mangledName": "$s9AV1Policy0aB7ManagerCACycfc",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "isHardwareAV1Supported",
+            "printedName": "isHardwareAV1Supported()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0aB7ManagerC010isHardwareA9SupportedSbyF",
+            "mangledName": "$s9AV1Policy0aB7ManagerC010isHardwareA9SupportedSbyF",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isHardwareHEVCSupported",
+            "printedName": "isHardwareHEVCSupported()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0aB7ManagerC23isHardwareHEVCSupportedSbyF",
+            "mangledName": "$s9AV1Policy0aB7ManagerC23isHardwareHEVCSupportedSbyF",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPlaybackProfile",
+            "printedName": "getPlaybackProfile(h264Master:hevcMaster:av1Master:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaybackProfile",
+                "printedName": "AV1Policy.PlaybackProfile",
+                "usr": "s:9AV1Policy15PlaybackProfileV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AV1Policy0aB7ManagerC18getPlaybackProfile10h264Master04hevcH003av1H0AA0eF0V10Foundation3URLV_ALSgAMtF",
+            "mangledName": "$s9AV1Policy0aB7ManagerC18getPlaybackProfile10h264Master04hevcH003av1H0AA0eF0V10Foundation3URLV_ALSgAMtF",
+            "moduleName": "AV1Policy",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9AV1Policy0aB7ManagerC",
+        "mangledName": "$s9AV1Policy0aB7ManagerC",
+        "moduleName": "AV1Policy",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ashish\/Projects\/av1decoder\/ios\/AV1Policy\/Sources\/AV1Policy\/AV1PlaybackController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 656,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ashish\/Projects\/av1decoder\/ios\/AV1Policy\/Sources\/AV1Policy\/AV1PolicyManager.swift",
+      "kind": "StringLiteral",
+      "offset": 142,
+      "length": 6,
+      "value": "\"h264\""
+    },
+    {
+      "filePath": "\/Users\/ashish\/Projects\/av1decoder\/ios\/AV1Policy\/Sources\/AV1Policy\/AV1PolicyManager.swift",
+      "kind": "StringLiteral",
+      "offset": 165,
+      "length": 6,
+      "value": "\"hevc\""
+    },
+    {
+      "filePath": "\/Users\/ashish\/Projects\/av1decoder\/ios\/AV1Policy\/Sources\/AV1Policy\/AV1PolicyManager.swift",
+      "kind": "StringLiteral",
+      "offset": 187,
+      "length": 5,
+      "value": "\"av1\""
+    },
+    {
+      "filePath": "\/Users\/ashish\/Projects\/av1decoder\/ios\/AV1Policy\/Sources\/AV1Policy\/AV1PolicyManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1571,
+      "length": 10,
+      "value": "0x61763031"
+    }
+  ]
+}
