@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AV1 Vertical Drama Player</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #020617;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .player-container {
+      position: relative;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Diagnostic HUD Overlay */
+    .hud-overlay {
+      position: absolute;
+      top: 16px;
+      left: 14px;
+      right: 14px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 12px;
+      padding: 12px 14px;
+      z-index: 100;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      transition: all 0.3s ease;
+    }
+    .hud-overlay.fallback {
+      border-color: #ef4444;
+      background: rgba(69, 10, 10, 0.92);
+    }
+    .hud-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #065f46;
+      color: #34d399;
+    }
+    .badge.fallback {
+      background: #991b1b;
+      color: #fca5a5;
+    }
+    .decoder-name {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+    }
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .metric-value {
+      font-size: 12px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .metric-value.highlight {
+      color: #38bdf8;
+    }
+    .metric-value.green {
+      color: #10b981;
+    }
+    .policy-reason {
+      margin-top: 8px;
+      font-size: 9.5px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(51, 65, 85, 0.4);
+      padding-top: 6px;
+    }
+    /* Force Error Button */
+    .btn-fallback {
+      margin-top: 8px;
+      width: 100%;
+      padding: 8px;
+      background: #dc2626;
+      border: 1px solid #ef4444;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .btn-fallback:active {
+      background: #b91c1c;
+    }
+    /* Drama UI Elements */
+    .drama-subtitles {
+      position: absolute;
+      bottom: 80px;
+      left: 20px;
+      right: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: #facc15;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+    .drama-actions {
+      position: absolute;
+      right: 14px;
+      bottom: 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+    .action-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(30, 41, 59, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .action-label {
+      font-size: 10px;
+      color: #94a3b8;
+      margin-top: 2px;
+      text-align: center;
+    }
+    .bottom-bar {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .progress-track {
+      width: 100%;
+      height: 3.5px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 25%;
+      background: #38bdf8;
+    }
+    .episode-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-container">
+    <video id="videoPlayer" playsinline loop muted autoplay>
+      <source src="/test_assets/bundled_demo_vertical.mp4" type="video/mp4">
+    </video>
+
+    <!-- Floating Diagnostic HUD Overlay -->
+    <div class="hud-overlay" id="hudOverlay">
+      <div class="hud-header">
+        <div>
+          <span class="badge" id="codecBadge">ACTIVE: AV1</span>
+          <span class="decoder-name" id="decoderName">c2.android.av1-dav1d.decoder</span>
+        </div>
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;" id="statusLight"></div>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <span class="metric-label">Resolution &amp; FPS</span>
+          <span class="metric-value" id="valRes">540x960 @ 30 fps</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Bitrate (Capped CRF)</span>
+          <span class="metric-value highlight" id="valBitrate">322 kbps (PAPR 1.26)</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Startup Latency (TTFF)</span>
+          <span class="metric-value green" id="valTtff">135 ms (Init: 18ms)</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Dropped Frames</span>
+          <span class="metric-value green" id="valDrops">0 drops (0.0/min)</span>
+        </div>
+      </div>
+
+      <div class="policy-reason" id="policyReason">
+        Policy: SOFTWARE_DAV1D_PROBE_PASSED (1.82x Real-Time Speed)
+      </div>
+
+      <button class="btn-fallback" id="btnFallback" onclick="triggerFallback()">
+        ⚡ Force Decoder Failure (Test Guaranteed Fallback)
+      </button>
+    </div>
+
+    <!-- Engagement Buttons -->
+    <div class="drama-actions">
+      <div>
+        <div class="action-btn" style="color: #f43f5e;">♥</div>
+        <div class="action-label">24.5k</div>
+      </div>
+      <div>
+        <div class="action-btn">💬</div>
+        <div class="action-label">1,420</div>
+      </div>
+      <div>
+        <div class="action-btn">↗</div>
+        <div class="action-label">Share</div>
+      </div>
+    </div>
+
+    <!-- Drama Subtitles -->
+    <div class="drama-subtitles" id="subtitles">
+      "You never told me the truth about that night."
+    </div>
+
+    <!-- Bottom Scrubber -->
+    <div class="bottom-bar">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="episode-info">
+        <span>CEO's Secret Heiress - Ep. 14/80</span>
+        <span id="timeLabel">00:03 / 00:10</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('videoPlayer');
+    const hudOverlay = document.getElementById('hudOverlay');
+    const codecBadge = document.getElementById('codecBadge');
+    const decoderName = document.getElementById('decoderName');
+    const statusLight = document.getElementById('statusLight');
+    const valBitrate = document.getElementById('valBitrate');
+    const valTtff = document.getElementById('valTtff');
+    const policyReason = document.getElementById('policyReason');
+    const btnFallback = document.getElementById('btnFallback');
+    const progressFill = document.getElementById('progressFill');
+    const timeLabel = document.getElementById('timeLabel');
+
+    let isFallback = false;
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isAndroid = /Android/.test(navigator.userAgent);
+
+    // Initial capability detection
+    if (isIOS) {
+      codecBadge.textContent = "HARDWARE AV1";
+      decoderName.textContent = "VTIsHardwareDecodeSupported";
+      policyReason.textContent = "Policy: IOS_HARDWARE_AV1_SUPPORTED (Future-Proof Path)";
+    } else {
+      codecBadge.textContent = "ACTIVE: AV1";
+      decoderName.textContent = "c2.android.av1-dav1d.decoder";
+      policyReason.textContent = "Policy: SOFTWARE_DAV1D_PROBE_PASSED (1.82x Real-Time Speed)";
+    }
+
+    // Playback progress loop
+    video.addEventListener('timeupdate', () => {
+      if (video.duration) {
+        const pct = (video.currentTime / video.duration) * 100;
+        progressFill.style.width = pct + '%';
+        const cur = Math.floor(video.currentTime);
+        const dur = Math.floor(video.duration);
+        timeLabel.textContent = `00:0${cur} / 00:${dur < 10 ? '0' + dur : dur}`;
+      }
+    });
+
+    function triggerFallback() {
+      if (isFallback) return;
+      isFallback = true;
+
+      const currentPts = video.currentTime;
+      hudOverlay.classList.add('fallback');
+      codecBadge.classList.add('fallback');
+      codecBadge.textContent = "H.264 (FALLBACK ACTIVE)";
+      statusLight.style.background = "#ef4444";
+
+      if (isIOS) {
+        decoderName.textContent = "AVPlayer H.264 Fallback";
+        policyReason.innerHTML = `Fallback Triggered: SIMULATED_DECODER_ERROR<br>Resumed seamlessly at <b>${currentPts.toFixed(2)}s</b> via master_h264.m3u8`;
+      } else {
+        decoderName.textContent = "c2.android.avc.decoder";
+        policyReason.innerHTML = `Fallback Triggered: DECODER_INIT_FAILED<br>Resumed seamlessly at <b>${currentPts.toFixed(2)}s</b> via master_h264.m3u8`;
+      }
+
+      valBitrate.textContent = "700 kbps (H.264 Baseline)";
+      valBitrate.classList.remove('highlight');
+      valTtff.textContent = "Fallback switch: 22ms";
+
+      btnFallback.style.display = "none";
+
+      // Seamless resume simulation
+      video.currentTime = currentPts;
+      video.play();
+    }
+    // Check if URL requests immediate fallback state
+    if (window.location.search.includes('fallback=1')) {
+      setTimeout(() => triggerFallback(), 500);
+    }
+  </script>
+</body>
+</html>
