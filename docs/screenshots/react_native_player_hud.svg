@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 840" width="100%" height="100%" style="background:#090d16; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;">
+  <defs>
+    <linearGradient id="rn-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293bfa"/>
+      <stop offset="100%" stop-color="#0f172ae6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Device Frame -->
+  <rect x="10" y="10" width="400" height="820" rx="40" fill="none" stroke="#334155" stroke-width="3"/>
+  <rect x="14" y="14" width="392" height="812" rx="36" fill="#020617"/>
+
+  <!-- React Native / Expo Video Badge Header -->
+  <g transform="translate(24, 50)">
+    <rect width="372" height="195" rx="16" fill="url(#rn-card)" stroke="#60a5fa" stroke-width="1.2"/>
+
+    <text x="18" y="28" fill="#60a5fa" font-size="12" font-weight="bold">REACT NATIVE &amp; EXPO BRIDGE</text>
+    <text x="354" y="28" fill="#94a3b8" font-size="11" text-anchor="end">av1-vertical-drama-bridge</text>
+
+    <line x1="18" y1="40" x2="354" y2="40" stroke="#334155" stroke-width="0.8"/>
+
+    <!-- Codec & Profile Output -->
+    <rect x="18" y="52" width="110" height="24" rx="6" fill="#10b981"/>
+    <text x="73" y="68" fill="#064e3b" font-size="11" font-weight="bold" text-anchor="middle">ACTIVE: AV1</text>
+    <text x="140" y="69" fill="#f8fafc" font-size="12" font-weight="600">540x960 (Mid Rung)</text>
+
+    <!-- Buffer details -->
+    <text x="18" y="102" fill="#94a3b8" font-size="10">BUFFER CONFIG (DRAMA TUNED)</text>
+    <text x="18" y="118" fill="#38bdf8" font-size="12" font-weight="600">bufferForPlaybackMs: 800ms</text>
+    <text x="210" y="118" fill="#38bdf8" font-size="12" font-weight="600">forwardBuffer: 4.0s</text>
+
+    <text x="18" y="144" fill="#94a3b8" font-size="10">REASON CODE</text>
+    <text x="18" y="160" fill="#a7f3d0" font-size="11.5" font-weight="600">ANDROID_DAV1D_ELIGIBLE_JS_FALLBACK</text>
+
+    <text x="18" y="180" fill="#64748b" font-size="9.5">Adaptive Bitrate: Segment Peak Bandwidth 440 kbps</text>
+  </g>
+
+  <!-- Video Playback Container -->
+  <rect x="24" y="260" width="372" height="460" rx="16" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+  <circle cx="210" cy="460" r="90" fill="#4338ca" opacity="0.5"/>
+  <polygon points="195,430 240,460 195,490" fill="#ffffff" opacity="0.8"/>
+  <text x="210" y="530" fill="#c7d2fe" font-size="13" font-weight="500" text-anchor="middle">&lt;Video bufferConfig={DRAMA_BUFFER_CONFIG} /&gt;</text>
+
+  <!-- Test Trigger Button -->
+  <g transform="translate(24, 740)">
+    <rect width="372" height="42" rx="10" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+    <text x="186" y="26" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">⚡ Test Fallback: Switch to master_h264.m3u8</text>
+  </g>
+</svg>

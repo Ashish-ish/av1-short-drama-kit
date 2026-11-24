@@ -127,9 +127,46 @@ Measured on real device test passes comparing default un-tuned ExoPlayer/AVPlaye
 
 ---
 
-## 6. How to Implement
+## 6. Screenshots & Framework UI
 
-### 6.1 Transcoding Reference Commands
+The kit includes pixel-perfect player implementations and performance overlays across all three supported mobile stacks:
+
+### 6.1 Android Media3 Diagnostic HUD
+Shows active playback of AV1 via platform `dav1d`, real-time TTFF (140ms), decoder initialization latency (18ms), zero dropped frames, and an interactive "Force Decoder Failure" testing trigger:
+
+- [View Full Android HUD Mockup](file:///Users/ashish/Projects/av1decoder/docs/screenshots/android_player_hud.svg)
+
+```
+┌────────────────────────────────────────────────────────┐
+│  ACTIVE: AV1  |  c2.android.av1-dav1d.decoder          │
+├────────────────────────────────────────────────────────┤
+│  Resolution: 540x960 @ 30 fps  |  Bitrate: 322 kbps    │
+│  TTFF: 140ms (Init: 18ms)      |  PAPR: 1.26 (Passed)  │
+│  Dropped Frames: 0 (0.0/min)   |  Buffer: 800ms Target │
+│  Policy: SOFTWARE_DAV1D_PROBE_PASSED (1.82x Real-Time) │
+└────────────────────────────────────────────────────────┘
+```
+
+### 6.2 iOS AVPlayer Hardware HUD
+Displays runtime capability resolution using `VTIsHardwareDecodeSupported` on iOS, stream selection (`master_av1.m3u8`), and metrics extracted from `AVPlayerItemAccessLog`:
+
+- [View Full iOS HUD Mockup](file:///Users/ashish/Projects/av1decoder/docs/screenshots/ios_player_hud.svg)
+
+### 6.3 React Native & Expo Bridge
+Illustrates `<Video ... />` component integration with `bufferForPlaybackMs: 800ms` and `expo-video` forward buffer tuning:
+
+- [View React Native Bridge Mockup](file:///Users/ashish/Projects/av1decoder/docs/screenshots/react_native_player_hud.svg)
+
+### 6.4 Guaranteed Runtime Fallback Transition
+Demonstrates the automatic mid-stream switch from AV1 to H.264 when an error occurs or when frame drops exceed 5% over trailing 10 seconds:
+
+- [View Fallback Transition Diagram](file:///Users/ashish/Projects/av1decoder/docs/screenshots/fallback_transition.svg)
+
+---
+
+## 7. How to Implement
+
+### 7.1 Transcoding Reference Commands
 Per [ADR-001: Capped CRF and VBV](file:///Users/ashish/Projects/av1decoder/docs/adr/ADR-001-capped-crf-and-vbv.md), pure CRF is prohibited. Segment boundaries must align to closed 2-second GOPs with Lanczos scaling.
 
 #### H.264 at 540x960 (30 fps, 2s GOP):
@@ -161,7 +198,7 @@ ffmpeg -i master.mp4 -vf "scale=540:960:flags=lanczos,fps=30" \
 
 ---
 
-### 6.2 Master Playlist Packaging (CMAF fMP4 HLS)
+### 7.2 Master Playlist Packaging (CMAF fMP4 HLS)
 Package each rung as CMAF fMP4 HLS segments. Publish three independent master playlists pointing to the shared media segments:
 - `master_h264.m3u8`
 - `master_hevc.m3u8`
@@ -183,7 +220,7 @@ av1/720p/index.m3u8
 
 ---
 
-### 6.3 Android Integration (`androidx.media3`)
+### 7.3 Android Integration (`androidx.media3`)
 Per [ADR-002](file:///Users/ashish/Projects/av1decoder/docs/adr/ADR-002-lazy-decoder-init.md) and [ADR-004](file:///Users/ashish/Projects/av1decoder/docs/adr/ADR-004-eligibility-thresholds-and-tuning.md), bind platform `dav1d` by name and decouple network preloading from decoder initialization:
 
 ```kotlin
@@ -223,7 +260,7 @@ preloadController.preloadNextEpisode("ep02", profile.selectedMasterUrl)
 
 ---
 
-### 6.4 iOS Integration (`AV1Policy` Swift Package)
+### 7.4 iOS Integration (`AV1Policy` Swift Package)
 iOS is hardware-only. We frame iOS strictly as **future-proofing without hardcoded device models or unsourced adoption claims**:
 
 ```swift
@@ -243,7 +280,7 @@ controller.loadVideo(
 
 ---
 
-### 6.5 React Native & Expo Bridge
+### 7.5 React Native & Expo Bridge
 Integrate via [react-native/src/index.ts](file:///Users/ashish/Projects/av1decoder/react-native/src/index.ts) without forking underlying players:
 
 ```tsx
@@ -277,7 +314,7 @@ export function ShortDramaFeedItem() {
 
 ---
 
-## 7. Interactive Savings Calculator
+## 8. Interactive Savings Calculator
 
 Calculate net monthly CDN egress savings using your organization's contracted CDN price:
 
@@ -309,22 +346,53 @@ Monthly Impact:
 
 ---
 
-## 8. Quickstart & Verification (`Makefile`)
+## 9. Comprehensive Testing & Verification
 
+The repository contains automated unit and integration tests across all four modules:
+
+| Test Target | Language / Framework | Scope & Coverage | Command |
+| :--- | :--- | :--- | :--- |
+| **Harness & BD-Rate** | Python `unittest` | Polynomial curve fitting, ITU-T BD-rate, VMAF model, VBV syntax, PAPR spikes, HLS manifests | `python3 -m unittest discover -s tests` |
+| **React Native Bridge**| Node.js / TypeScript | Device platform routing, DRM bypass, buffer configs, user override | `npm test --prefix react-native` |
+| **Android Library** | Kotlin / JUnit | Probe status transitions, cooldown expiration, 10s sliding window, codec selector | `cd android && ./gradlew test` |
+| **iOS Swift Package** | Swift / XCTest | FourCC AV1 decoding check, profile serialization, playback controller | `cd ios/AV1Policy && swift test` |
+
+Execute all validation checks in one command:
 ```bash
-# 1. Run reproducible demo encode on bundled 10-second vertical clip
-make demo-encode
-
-# 2. Run multi-codec BD-rate benchmark and generate SVG curves
-make bench
-
-# 3. Execute all unit and integration test suites
 make check
 ```
 
 ---
 
-## 9. Known Limitations and Governance
+## 10. CI/CD Pipeline & SDK Release Guide
+
+The repository ships with full GitHub Actions automation:
+
+### 10.1 Continuous Integration (`.github/workflows/ci.yml`)
+- Triggers on every push and pull request to `main`.
+- Multi-matrix testing across Python 3.11–3.13, Node 18–22, Android SDK 34, and macOS Xcode 15.
+- Validates transcoding syntax, PAPR compliance, and unit test suites across all frameworks.
+
+### 10.2 Releasing New SDK Versions (`.github/workflows/release.yml`)
+To release a new version of the multi-platform SDK:
+
+1. Update version tags across subprojects:
+   - Android: `android/av1-policy/build.gradle`
+   - React Native: `react-native/package.json`
+2. Commit and push a git release tag:
+   ```bash
+   git tag v0.1.0
+   git push origin v0.1.0
+   ```
+3. The release pipeline automatically:
+   - Builds and packages `av1-policy-0.1.0.aar` for Android.
+   - Archives and calculates SHA256 for `AV1Policy-iOS-0.1.0.zip` for Swift Package Manager.
+   - Builds and packages `av1-vertical-drama-bridge-0.1.0.tgz` for npm.
+   - Publishes a formal GitHub Release with compiled binaries and benchmark reports attached.
+
+---
+
+## 11. Known Limitations and Governance
 
 1. **DRM Protection**: Software AV1 (`dav1d`) cannot satisfy Widevine L1 secure hardware decoders. DRM-protected assets must remain on H.264 or hardware HEVC.
 2. **iOS Software Decoding**: AVPlayer cannot bind third-party decoders. Software AV1 is out of scope for iOS v1.
@@ -338,7 +406,7 @@ make check
 
 ---
 
-## 10. Architecture Decision Records
+## 12. Architecture Decision Records
 
 - [ADR-001: Capped CRF and VBV instead of Pure CRF](file:///Users/ashish/Projects/av1decoder/docs/adr/ADR-001-capped-crf-and-vbv.md)
 - [ADR-002: Lazy Decoder Initialisation with Decoupled Network Preload](file:///Users/ashish/Projects/av1decoder/docs/adr/ADR-002-lazy-decoder-init.md)

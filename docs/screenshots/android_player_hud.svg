@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 840" width="100%" height="100%" style="background:#090d16; font-family:-apple-system,BlinkMacSystemFont,Roboto,Helvetica,sans-serif;">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="40%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="hud-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293bcc" />
+      <stop offset="100%" stop-color="#0f172ae6" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Device Frame (Android) -->
+  <rect x="10" y="10" width="400" height="820" rx="42" fill="none" stroke="#334155" stroke-width="4"/>
+  <rect x="14" y="14" width="392" height="812" rx="38" fill="url(#bg-grad)"/>
+
+  <!-- Top Camera Punchhole -->
+  <circle cx="210" cy="36" r="8" fill="#020617" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Status Bar Icons -->
+  <text x="36" y="40" fill="#94a3b8" font-size="12" font-weight="600">09:41</text>
+  <text x="340" y="40" fill="#94a3b8" font-size="11" font-weight="600">5G 98%</text>
+
+  <!-- Dramatic Scene Artwork Simulation (Vertical Drama) -->
+  <g opacity="0.65">
+    <circle cx="210" cy="340" r="130" fill="#4338ca" filter="url(#shadow)" opacity="0.4"/>
+    <ellipse cx="210" cy="300" rx="65" ry="85" fill="#6366f1" opacity="0.5"/>
+    <!-- Silhouette of actors in close dialogue -->
+    <path d="M 170 380 Q 210 320 250 380 Z" fill="#0f172a"/>
+    <circle cx="210" cy="270" r="42" fill="#1e293b"/>
+    <!-- Subtitles in 9:16 frame -->
+    <rect x="50" y="580" width="320" height="36" rx="6" fill="#000000a6"/>
+    <text x="210" y="603" fill="#facc15" font-size="14" font-weight="600" text-anchor="middle">"You never told me the truth about that night."</text>
+  </g>
+
+  <!-- Floating Diagnostic HUD (Android / Media3) -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="70" width="364" height="175" rx="14" fill="url(#hud-glass)" stroke="#38bdf8" stroke-width="1.2"/>
+
+    <!-- Header badge -->
+    <rect x="42" y="84" width="95" height="22" rx="4" fill="#065f46"/>
+    <text x="89" y="99" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">ACTIVE: AV1</text>
+    <text x="146" y="99" fill="#94a3b8" font-size="11">c2.android.av1-dav1d.decoder</text>
+
+    <!-- Metrics Grid -->
+    <line x1="42" y1="116" x2="378" y2="116" stroke="#334155" stroke-width="0.8"/>
+
+    <text x="42" y="134" fill="#64748b" font-size="10">RESOLUTION &amp; FPS</text>
+    <text x="42" y="150" fill="#f8fafc" font-size="13" font-weight="bold">540x960 @ 30 fps</text>
+
+    <text x="210" y="134" fill="#64748b" font-size="10">BITRATE &amp; PAPR</text>
+    <text x="210" y="150" fill="#38bdf8" font-size="13" font-weight="bold">322 kbps (PAPR 1.26)</text>
+
+    <text x="42" y="174" fill="#64748b" font-size="10">STARTUP LATENCY</text>
+    <text x="42" y="190" fill="#10b981" font-size="13" font-weight="bold">TTFF: 140ms (Init: 18ms)</text>
+
+    <text x="210" y="174" fill="#64748b" font-size="10">DROPPED FRAMES</text>
+    <text x="210" y="190" fill="#10b981" font-size="13" font-weight="bold">0 drops (0.0/min)</text>
+
+    <text x="42" y="214" fill="#94a3b8" font-size="9.5">Policy: SOFTWARE_DAV1D_PROBE_PASSED (1.82x Real-Time)</text>
+    <circle cx="368" cy="95" r="5" fill="#10b981"/>
+  </g>
+
+  <!-- Interactive Test Fallback Button -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="260" width="364" height="38" rx="8" fill="#dc2626" stroke="#ef4444" stroke-width="1"/>
+    <text x="210" y="284" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">⚡ Force Decoder Failure (Test Guaranteed Fallback)</text>
+  </g>
+
+  <!-- Right-side Engagement Column (TikTok / DramaFeed Style) -->
+  <g transform="translate(350, 420)">
+    <circle cx="20" cy="0" r="20" fill="#1e293bcc" stroke="#475569" stroke-width="1"/>
+    <text x="20" y="5" fill="#f43f5e" font-size="18" text-anchor="middle">♥</text>
+    <text x="20" y="28" fill="#94a3b8" font-size="10" text-anchor="middle">24.5k</text>
+
+    <circle cx="20" cy="65" r="20" fill="#1e293bcc" stroke="#475569" stroke-width="1"/>
+    <text x="20" y="70" fill="#cbd5e1" font-size="16" text-anchor="middle">💬</text>
+    <text x="20" y="93" fill="#94a3b8" font-size="10" text-anchor="middle">1,420</text>
+
+    <circle cx="20" cy="130" r="20" fill="#1e293bcc" stroke="#475569" stroke-width="1"/>
+    <text x="20" y="135" fill="#cbd5e1" font-size="16" text-anchor="middle">↗</text>
+    <text x="20" y="158" fill="#94a3b8" font-size="10" text-anchor="middle">Share</text>
+  </g>
+
+  <!-- Bottom Navigation / Episode Scrubber -->
+  <rect x="28" y="750" width="364" height="4" rx="2" fill="#334155"/>
+  <rect x="28" y="750" width="130" height="4" rx="2" fill="#38bdf8"/>
+  <circle cx="158" cy="752" r="6" fill="#f8fafc"/>
+  <text x="28" y="776" fill="#f8fafc" font-size="12" font-weight="600">CEO's Secret Heir - Ep. 14/80</text>
+  <text x="392" y="776" fill="#94a3b8" font-size="11" text-anchor="end">00:14 / 01:12</text>
+</svg>

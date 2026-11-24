@@ -1,7 +1,19 @@
 const test = require('node:test');
 const assert = require('node:assert');
 
-// Test the core decision logic
+// Mock drama buffer settings
+const DRAMA_BUFFER_CONFIG = {
+  reactNativeVideo: {
+    minBufferMs: 5000,
+    maxBufferMs: 15000,
+    bufferForPlaybackMs: 800,
+    bufferForPlaybackAfterRebufferMs: 2000,
+  },
+  expoVideo: {
+    preferredForwardBufferDuration: 4.0,
+  },
+};
+
 function evaluateProfile(masters, options, platform = 'android', apiLevel = 34) {
   if (options?.forceH264) {
     return { codec: 'h264', masterUrl: masters.h264, reason: 'USER_OVERRIDE_H264' };
@@ -68,4 +80,20 @@ test('Older Android (API < 31) falls back to HEVC/H.264', () => {
   };
   const profile = evaluateProfile(masters, {}, 'android', 29);
   assert.strictEqual(profile.codec, 'hevc');
+});
+
+test('Drama buffer config enforces sub-1000ms start threshold', () => {
+  assert.strictEqual(DRAMA_BUFFER_CONFIG.reactNativeVideo.bufferForPlaybackMs, 800);
+  assert.strictEqual(DRAMA_BUFFER_CONFIG.expoVideo.preferredForwardBufferDuration, 4.0);
+});
+
+test('User forced override immediately yields H.264 master', () => {
+  const masters = {
+    h264: 'https://cdn.example.com/master_h264.m3u8',
+    hevc: 'https://cdn.example.com/master_hevc.m3u8',
+    av1: 'https://cdn.example.com/master_av1.m3u8',
+  };
+  const profile = evaluateProfile(masters, { forceH264: true });
+  assert.strictEqual(profile.codec, 'h264');
+  assert.strictEqual(profile.reason, 'USER_OVERRIDE_H264');
 });

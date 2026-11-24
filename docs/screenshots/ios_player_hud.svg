@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 840" width="100%" height="100%" style="background:#000000; font-family:-apple-system,BlinkMacSystemFont,SF Pro Display,sans-serif;">
+  <defs>
+    <linearGradient id="ios-hud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#18181bcc"/>
+      <stop offset="100%" stop-color="#09090be6"/>
+    </linearGradient>
+    <filter id="ios-blur">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- iPhone Rounded Bezel -->
+  <rect x="10" y="10" width="400" height="820" rx="48" fill="none" stroke="#27272a" stroke-width="3"/>
+  <rect x="14" y="14" width="392" height="812" rx="44" fill="#09090b"/>
+
+  <!-- Dynamic Island -->
+  <rect x="145" y="24" width="130" height="30" rx="15" fill="#000000"/>
+  <circle cx="165" cy="39" r="5" fill="#18181b"/>
+  <circle cx="255" cy="39" r="4.5" fill="#0284c7" opacity="0.7"/>
+
+  <!-- iOS Status Bar -->
+  <text x="42" y="44" fill="#ffffff" font-size="13" font-weight="600">9:41</text>
+  <text x="375" y="44" fill="#ffffff" font-size="11" font-weight="500" text-anchor="end">5G 􀛨</text>
+
+  <!-- Video Background Simulation -->
+  <g opacity="0.6">
+    <rect x="14" y="60" width="392" height="766" fill="#0c0a09"/>
+    <circle cx="210" cy="400" r="140" fill="#7c2d12" opacity="0.3"/>
+    <text x="210" y="620" fill="#ffffff" font-size="15" font-weight="500" text-anchor="middle" letter-spacing="0.5">"I knew who you were from the beginning."</text>
+  </g>
+
+  <!-- iOS AV1Policy Glassmorphic HUD -->
+  <g transform="translate(24, 75)">
+    <rect width="372" height="165" rx="20" fill="url(#ios-hud)" stroke="#27272a" stroke-width="1"/>
+
+    <rect x="16" y="16" width="135" height="24" rx="12" fill="#047857"/>
+    <text x="83" y="32" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">HARDWARE AV1</text>
+
+    <text x="165" y="32" fill="#a1a1aa" font-size="11">VTIsHardwareDecode: YES</text>
+    <circle cx="350" cy="28" r="4.5" fill="#10b981"/>
+
+    <line x1="16" y1="52" x2="356" y2="52" stroke="#27272a" stroke-width="1"/>
+
+    <text x="16" y="74" fill="#71717a" font-size="10">MASTER PLAYLIST</text>
+    <text x="16" y="90" fill="#fafafa" font-size="13" font-weight="600">master_av1.m3u8 (720p)</text>
+
+    <text x="200" y="74" fill="#71717a" font-size="10">STARTUP TIME (TTFF)</text>
+    <text x="200" y="90" fill="#34d399" font-size="13" font-weight="600">105 ms</text>
+
+    <text x="16" y="118" fill="#71717a" font-size="10">DROPPED FRAMES</text>
+    <text x="16" y="134" fill="#fafafa" font-size="13" font-weight="600">0 (AVPlayerItemAccessLog)</text>
+
+    <text x="200" y="118" fill="#71717a" font-size="10">REBUFFER STALLS</text>
+    <text x="200" y="134" fill="#fafafa" font-size="13" font-weight="600">0 stalls</text>
+
+    <text x="16" y="152" fill="#a1a1aa" font-size="9.5">Policy: IOS_HARDWARE_AV1_SUPPORTED (Future-Proof Path)</text>
+  </g>
+
+  <!-- Manual Fallback Trigger Pill -->
+  <g transform="translate(24, 255)">
+    <rect width="372" height="38" rx="12" fill="#ef444433" stroke="#ef4444" stroke-width="1"/>
+    <text x="186" y="24" fill="#fca5a5" font-size="12" font-weight="600" text-anchor="middle">⚡ Simulate Playback Error (Mid-Stream Fallback)</text>
+  </g>
+
+  <!-- iOS Home Bar Indicator -->
+  <rect x="140" y="812" width="140" height="4" rx="2" fill="#ffffff" opacity="0.6"/>
+</svg>
